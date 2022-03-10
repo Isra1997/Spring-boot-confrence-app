@@ -1,7 +1,9 @@
 package com.eec.conferencedemo.models;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import java.awt.geom.GeneralPath;
 import java.util.List;
 import javax.persistence.Entity;
@@ -11,6 +13,9 @@ import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 
 @Entity(name = "speakers")
+@JsonIdentityInfo(
+  generator = ObjectIdGenerators.PropertyGenerator.class,
+  property = "speaker_id")
 public class Speaker {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,7 +25,7 @@ public class Speaker {
   private String title;
   private String company;
   private String speaker_bio;
-//  @JsonBackReference
+
   @ManyToMany(mappedBy = "speakers")
   List<Session> sessions;
 

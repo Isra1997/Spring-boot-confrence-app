@@ -1,7 +1,9 @@
 package com.eec.conferencedemo.models;
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -12,6 +14,9 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 
 @Entity(name="sessions")
+@JsonIdentityInfo(
+  generator = ObjectIdGenerators.PropertyGenerator.class,
+  property = "session_id")
 public class Session {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
