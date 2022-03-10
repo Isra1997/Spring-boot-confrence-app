@@ -65,6 +65,8 @@
     <orderEntry type="library" name="Maven: org.springframework:spring-tx:5.3.16" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.36" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-aspects:5.3.16" level="project" />
+    <orderEntry type="library" name="Maven: org.jasypt:jasypt:1.9.3" level="project" />
+    <orderEntry type="library" name="Maven: com.github.ulisesbocchio:jasypt-spring-boot:3.0.2" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: org.postgresql:postgresql:42.3.3" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: org.checkerframework:checker-qual:3.5.0" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.springframework.boot:spring-boot-starter-test:2.6.4" level="project" />
