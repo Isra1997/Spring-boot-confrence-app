@@ -1,11 +1,13 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="ConferenceDemoApplication" type="Application" factoryName="Application" nameIsGenerated="true">
     <envs>
-      <env name="jasypt.encryptor.password" value="secretKey" />
+      <env name="password" value="5111997" />
+      <env name="URL" value="jdbc:postgresql://localhost:5432/conference_app" />
+      <env name="username" value="postgres" />
     </envs>
     <option name="MAIN_CLASS_NAME" value="com.eec.conferencedemo.ConferenceDemoApplication" />
     <module name="conference-demo" />
-    <option name="PROGRAM_PARAMETERS" value="-Djasypt.encryptor.password=secretKey" />
+    <option name="VM_PARAMETERS" value="-Dspring.profiles.active=prod" />
     <extension name="coverage">
       <pattern>
         <option name="PATTERN" value="com.eec.conferencedemo.*" />

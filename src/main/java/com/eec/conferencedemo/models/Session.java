@@ -1,8 +1,6 @@
 package com.eec.conferencedemo.models;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import java.util.List;
 import javax.persistence.Entity;
@@ -26,9 +24,9 @@ public class Session {
   private Integer session_Length;
 
   @ManyToMany
-//  @JsonManagedReference
   @JoinTable(name = "session_speakers",
               joinColumns = @JoinColumn(name = "session_id"),
+
               inverseJoinColumns = @JoinColumn(name = "speaker_id"))
   private List<Speaker> speakers;
 

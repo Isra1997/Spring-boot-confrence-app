@@ -1,9 +1,13 @@
 package com.eec.conferencedemo.models;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
 @Entity(name ="session_schedule")
 public class SessionSchedule {
+  @Id
+  @GeneratedValue
   private Long schedule_id;
   private Long time_slot_id;
   private Long session_id;
